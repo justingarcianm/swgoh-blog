@@ -16,9 +16,13 @@ const Hero = () => (
       }
     `}>
         {
-            ({ loading, data }) => {
+            ({ loading, error, data }) => {
                 if (loading) {
                     return <Loading />
+                }
+                if (error) {
+                    window.location.reload()
+                    return <h2>OPPS!!!</h2>
                 }
                 const { heroTitle, heroSubtitle, heroImage } = data.banner
                 return (
