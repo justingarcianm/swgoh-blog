@@ -1,0 +1,25 @@
+#sideBar {
+    border-left: 2px solid #ccc;
+    padding-left: 2em;
+}
+
+.sidebar-links a{
+    color: #222;
+    margin-right: .5em;
+    font-size: .9em;
+}
+
+.sidebar-links a:hover {
+    color: #ccc;
+    text-decoration: none;
+}
+
+@media only screen and (max-width:500px){
+    #sideBar {
+        border-top: 2px solid #ccc;
+        padding-top: 2em;
+        margin-top: 2em;
+        border-left: none;
+        padding-left: none;
+    }
+}

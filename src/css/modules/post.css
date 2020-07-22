@@ -1,0 +1,16 @@
+.userBanner {
+    padding: 2em;
+}
+
+.postContent img {
+    width: 100%;
+}
+
+.related-articles h3 {
+    color: #222;
+}
+.related > a:hover {
+    text-decoration: none;
+}
+
+

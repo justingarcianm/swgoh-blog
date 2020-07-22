@@ -1,0 +1,14 @@
+@import 'modules/global.css';
+@import 'modules/hero.css';
+@import 'modules/featured.css';
+@import 'modules/mainFeed.css';
+@import 'modules/card.css';
+@import 'modules/sidebar.css';
+@import 'modules/searchResults.css';
+@import 'modules/login.css';
+@import 'modules/resources.css';
+@import 'modules/post.css';
+@import 'modules/user.css';
+@import 'modules/about.css';
+@import 'modules/header.css';
+@import 'modules/footer.css';

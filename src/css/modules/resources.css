@@ -1,0 +1,19 @@
+#resourceLinks span {
+    font-size: 3rem;
+    color: #ccc;
+    margin-bottom: 5px;
+    cursor: default;
+}
+
+#resourceLinks li {
+    list-style-type: none;
+    font-size: 1.3rem;
+}
+
+#resourceLinks a {
+    color: #222;
+}
+#resourceLinks a:hover {
+    color: #ccc;
+    text-decoration: none;
+}

@@ -1,0 +1,15 @@
+#user .col-md-4,
+#user .col-md-6 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.userImage {
+    width: 250px;
+    height: 250px!important;
+    border-radius: 50%;
+}
+
+.article-body a:hover {
+    text-decoration: none;
+}

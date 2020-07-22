@@ -1,0 +1,32 @@
+.navbar-brand {
+    font-size: 2em!important;
+}
+
+nav .btn svg {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+nav .btn{
+    padding: 0!important;
+}
+
+nav {
+    box-shadow: 0px 2px 11px 1px #343a40;
+}
+
+.navbar-dark .navbar-toggler {
+    border: none!important;
+}
+
+.headerAvatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width:500px) {
+    .search {
+        display: none!important;
+    }
+}

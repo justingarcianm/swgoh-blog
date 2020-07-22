@@ -1,0 +1,22 @@
+.userResults {
+    padding: 2em;
+}
+
+#displayResults a:hover {
+    text-decoration: none;
+}
+
+#displayResults a {
+    color: #222;
+}
+
+.postResult,
+.userResults {
+    margin: 2em;
+    box-shadow: 1px 6px 15px #555;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.postResultBody {
+    padding: 1em;
+}

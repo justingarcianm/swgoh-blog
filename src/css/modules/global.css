@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Raleway:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    transition: ease 500ms;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Play', sans-serif;
+
+}
+
+p,
+li,
+a,
+span {
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn {
+    border-radius: 0px!important;
+    padding: .5rem 2rem!important;
+}
+
+.avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+
+.light {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.dark {
+    background-color: rgba(248, 89, 89, 1);
+    color: #fff;
+}
+
+.neutral {
+    background-color: #eee;
+}
+
+:root {
+    /* Main and secondary colors */
+}
+
+@media only screen and (max-width:500px){
+    .display-1,
+    .display-2,
+    .display-3,
+    .display-4,
+    .display-5 {
+        font-size: 2em!important;
+    }
+}

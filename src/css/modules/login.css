@@ -1,0 +1,9 @@
+.loginForm {
+    padding: 2em;
+    box-shadow: 1px 6px 15px #555;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#login .row {
+    height: 80vh;
+}
