@@ -2,7 +2,9 @@ import React from 'react'
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import { Link } from 'react-router-dom'
+
 import Loading from './Loading'
+
 const Featured = () => (
     <Query query={gql`
     {
@@ -58,6 +60,8 @@ const Featured = () => (
                     </div>
                     <div className="text-center pt-3">
                         <h1>Featured Post</h1>
+                    </div>
+                    <div>
                     </div>
                 </div>
                 )

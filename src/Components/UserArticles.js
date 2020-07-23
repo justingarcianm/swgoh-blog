@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import LoggedInUser from './LoggedInUser'
+
 const UserArticles = props => {
     return (
         <div className="articles p-5 container-fluid">
@@ -19,7 +21,7 @@ const UserArticles = props => {
                     <Link to={{pathname:`/post/${post.id}`, state:`${post.id}`}}><h4 className="article-author">{post.title}</h4></Link>
                         <h6 className="article-date">{date}</h6>
                     </div>
-                    
+                    {sessionStorage.getItem("userID") === props.user.id ? <LoggedInUser param={props.param} blog={true} postID={post.id} /> : ""}
                 </article>
                 </div>
             )

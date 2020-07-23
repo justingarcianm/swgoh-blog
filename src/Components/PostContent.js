@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import Markdown from 'react-markdown'
 
+import LoggedInUser from './LoggedInUser'
+
 const postContent = props => {
 
 
-    const { updated_at, category, content, image, title, user } = props.post
+    const { updated_at, category, content, image, title, user, id } = props.post
     const date = new Date(updated_at).toLocaleDateString("en-US");
     return (
         <div id="post">
@@ -25,6 +27,7 @@ const postContent = props => {
                 <div className="col-9">
                 <Link to={{pathname:`/author/${user.id}`, state:`${user.id}`}} className="article-author">{user.username}</Link>
                     <h6 className="article-date">{date}</h6>
+                    {sessionStorage.getItem("userID") === user.id ? <LoggedInUser param={props.param} postID={id}/> : ""}
                 </div>
             </div>
         </div>

@@ -55,7 +55,7 @@ const Post = props => (
            return(
                <Fragment>
                  <Header props={props}/>
-                   <PostContent post={data.post} />
+                   <PostContent post={data.post} param={props.location.pathname}/>
                    <PostComments comments={data.post.comments} id={props.match.params.slug || props.location.state}/>
                    <PostRelated related={data.post.category} />
                    </Fragment>

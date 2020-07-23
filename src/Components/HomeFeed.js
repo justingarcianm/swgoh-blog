@@ -2,9 +2,11 @@ import React from 'react'
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import Card from './Card'
-import Loading from './Loading'
 
-const HomeFeed = () => (
+import Loading from './Loading'
+import LoggedInUser from './LoggedInUser'
+
+const HomeFeed = props => (
     <Query query={gql`
     {
         posts(sort:"id:desc", limit: 10) {
@@ -35,12 +37,14 @@ const HomeFeed = () => (
                 }
                 if(error) {
                     console.log(error)
-                    window.location.reload()
+                    window.location.reload();
                     return <h2>OPPS!!!</h2>
                 }
                 return (
                     <div id="mainFeed">
-                        <h2>Latest Articles</h2>
+                        <h2>Latest Articles</h2>  
+                        { sessionStorage.getItem("userID") ? <LoggedInUser param={props.props.location.pathname} /> : ""}
+
                         {data.posts.map( post => <Card key={post.id} post={post} url={post.id} />)}
                     </div>
                 )

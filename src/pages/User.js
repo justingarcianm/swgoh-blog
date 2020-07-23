@@ -47,10 +47,10 @@ const User = props => (
                 <Header props={props}/>
                 <div id="user">
                         <div className={`${data.user.side.toLowerCase()}`}>
-                            <UserInfo user={data.user}/>
+                            <UserInfo user={data.user} param={props.location.pathname} />
                         </div>
                         <div className="neutral">
-                            <UserArticles post={data.posts} user={data.user}/>
+                            <UserArticles post={data.posts} user={data.user} param={props.location.pathname} />
                         </div>
                 </div>
                 </Fragment>

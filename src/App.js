@@ -11,6 +11,9 @@ import User from './pages/User'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import notFound from './pages/404'
+import EditPost from './pages/EditPost'
+import EditUser from './pages/EditUser'
+import CreatePost from './pages/CreatePost'
 // Styles
 import './css/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -32,6 +35,9 @@ function App () {
         <Route path="/author/:slug" component={User} />
         <Route path="/post/:slug" component={Post} />
         <Route path="/search/:slug" component={searchResults} />
+        <Route path="/edit-post/:slug" component={EditPost} />
+        <Route path="/edit-author/:slug" component={EditUser} />
+        <Route path="/create-post/:slug" component={CreatePost} />
         <Route component={notFound} />
         </Switch>
             </BrowserRouter>

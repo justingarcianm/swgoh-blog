@@ -20,7 +20,7 @@ const Login = props => {
             sessionStorage.setItem("token", res.data.jwt)
             sessionStorage.setItem("userID", res.data.user.id)
             props.history.push({
-                pathname:'/'
+                pathname:`/author/${res.data.user.id}`
             })
         })
         .catch(err => {

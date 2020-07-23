@@ -15,7 +15,7 @@ const Home = props => {
             <hr/>
             <div className="row">
                 <div className="col-md-8">
-                <HomeFeed />
+                <HomeFeed props={props}/>
                 </div>
                 <div className="col-md-4">
                     <SideBar />

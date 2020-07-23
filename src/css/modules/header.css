@@ -24,6 +24,9 @@ nav {
     height: 25px;
     border-radius: 50%;
 }
+.headerAvatar:hover {
+    transform: scale(1.1);
+}
 
 @media only screen and (max-width:500px) {
     .search {
