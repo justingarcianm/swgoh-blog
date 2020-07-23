@@ -21,6 +21,7 @@ const SideBar = () => {
             <div className="sidebar-links">
                 <Link to="/about">About</Link>
                 <Link to="/login">Login</Link>
+<a href="https://www.codingjustin.com/" target="_blank" rel="noopener noreferrer">&copy;Justin Garcia {new Date().getFullYear()}</a>
             </div>
         </div>
     )
