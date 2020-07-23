@@ -39,10 +39,10 @@ const About = props => (
                         </h2>
                         <div className="row text-center py-5">
                             <div className="col-md-3"></div>
-                            <div className="col-md-3">
+                            <div className="col-md-3 mt-1">
                                 <a href="https://apps.apple.com/us/app/star-wars-galaxy-of-heroes/id921022358" target="_blank" rel="noopener noreferrer" className="btn btn-dark"> <FaApple></FaApple> <span>Apple Store</span></a>
                             </div>
-                            <div className="col-md-3">
+                            <div className="col-md-3 mt-1">
                             <a href="https://play.google.com/store/apps/details?id=com.ea.game.starwarscapital_row&hl=en_US" target="_blank" rel="noopener noreferrer" className="btn btn-dark"> <FaGooglePlay></FaGooglePlay> <span>Google Play</span>  </a>
                             </div>
                             <div className="col-md-3"></div>

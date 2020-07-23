@@ -28,9 +28,13 @@ const Featured = () => (
         }
     `}>
         {
-            ({ loading, data }) => {
+            ({ loading, error, data }) => {
                 if( loading ) {
                     return <Loading/>
+                }
+                if( error ){
+                    window.location.reload()
+                    return <h2>OOPS!!!</h2>
                 }
                 const { title, id, updated_at, category, content, image, user } = data.posts[0]
                 const date = new Date(updated_at).toLocaleDateString("en-US");

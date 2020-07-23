@@ -36,7 +36,7 @@ const PostResults = props => (
                 if(!data.posts.length) {
                     return (
                         <div className="container pt-3">
-                            <h3>No Posts Found</h3>
+                            <h3 style={{  textDecoration: "line-through"}}>No Posts Found</h3>
                         </div>
                     )
                 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 
 import CommentInput from './CommentInput'
@@ -16,18 +16,19 @@ const postComments = props => {
                 const { id, user, commentBody, updated_at } = comment
                 const date = new Date(updated_at).toLocaleDateString("en-US");
                 return (
-                    <div key={id} className="comment row">
-                        <div className="col-1">
+                    <Fragment key={id}>
+                    <div className="comment row">
+                        <div className="col-md-1 col-2">
                         <img src={user.userImage.formats.thumbnail.url} alt={user.username} className="avatar" />
                         </div>
-                        <div className="col-8">
+                        <div className="col-7">
                 <Link to={{pathname:`/author/${user.id}`, state:`${user.id}`}}>{user.username}</Link> <span className="article-date"> {date}</span>
                         <p>{commentBody}</p>
                     </div>
-                    <div className="col-3">
-                        {sessionStorage.getItem("userID") === user.id ? <EditComment/> : ""}
+                    
                     </div>
-                    </div>
+                    {sessionStorage.getItem("userID") === user.id ? <EditComment comment={commentBody} id={id}/> : ""}
+                    </Fragment>
                 )
             })}
         </div>

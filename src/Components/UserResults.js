@@ -30,7 +30,7 @@ const UserResults = props => (
                 if(!data.users.length) {
                     return (
                         <div className="container pt-3">
-                            <h3>No Users Found</h3>
+                            <h3 style={{  textDecoration: "line-through"}}>No Users Found</h3>
                         </div>
                     )
                 }
