@@ -52,7 +52,7 @@ const handleSubmit = event => {
         return (
             <Fragment>
                 <form>
-                <div className="row">
+                <div className="row mb-2">
                     <div className="col-8">
                         <input 
                         className="form-control" 
@@ -73,7 +73,7 @@ const handleSubmit = event => {
     }
     return (
         <Fragment>
-            <button className="btn btn-warning" onClick={editPost}>EDIT</button>
+            <button className="btn btn-warning mb-2" onClick={editPost}>EDIT</button>
         </Fragment>
     )
 }

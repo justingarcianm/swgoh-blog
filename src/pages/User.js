@@ -5,7 +5,6 @@ import gql from 'graphql-tag'
 import UserInfo from '../Components/UserInfo'
 import UserArticles from '../Components/UserArticles'
 import Header from '../Components/Header'
-
 import Loading from '../Components/Loading'
 
 const User = props => (

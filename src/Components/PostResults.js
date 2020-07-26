@@ -33,7 +33,7 @@ const PostResults = props => (
                 if( loading ) {
                     return <Loading />
                 }
-                if(!data.posts.length) {
+                if(!data.posts) {
                     return (
                         <div className="container pt-3">
                             <h3 style={{  textDecoration: "line-through"}}>No Posts Found</h3>

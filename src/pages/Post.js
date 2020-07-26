@@ -31,7 +31,7 @@ const Post = props => (
           formats
         }
       }
-      comments {
+      comments(sort: "id:desc") {
         commentBody
         id
         updated_at

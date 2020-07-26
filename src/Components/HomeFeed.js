@@ -41,7 +41,7 @@ const HomeFeed = props => (
                     return <h2>OPPS!!!</h2>
                 }
                 return (
-                    <div id="mainFeed">
+                    <div id="homeFeed">
                         <h2>Latest Articles</h2>  
                         { sessionStorage.getItem("userID") ? <LoggedInUser param={props.props.location.pathname} /> : ""}
 

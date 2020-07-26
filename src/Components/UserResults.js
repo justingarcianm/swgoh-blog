@@ -27,7 +27,7 @@ const UserResults = props => (
                     return <Loading/>
                 }
 
-                if(!data.users.length) {
+                if(!data.users) {
                     return (
                         <div className="container pt-3">
                             <h3 style={{  textDecoration: "line-through"}}>No Users Found</h3>
