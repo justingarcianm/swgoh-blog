@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 
 import Loading from '../Components/Loading'
+import EditPostForm from '../Components/EditPostForm'
+import Header from '../Components/Header'
 
 const EditPost = props => (
     <Query query={gql`
@@ -12,11 +14,17 @@ const EditPost = props => (
             id
             image {
                 formats
+                id
             }
             content
             category {
                 catTitle
+                id
             }
+        }
+        categories {
+            catTitle
+            id
         }
     }
     `}>
@@ -30,9 +38,11 @@ const EditPost = props => (
                     alert("Please Log in to Edit this Post")
                     return <h2>Not Authorized</h2>
                 }
-                console.log(data)
                 return (
-                    <h2>EditPost</h2>
+                    <Fragment>
+                        <Header props={props}/>
+                        <EditPostForm data={data.post} categories={data.categories} route={props} />
+                    </Fragment>
                 )
             }
         }

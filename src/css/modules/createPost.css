@@ -9,7 +9,7 @@
     min-height: 20vh;
 }
 
-#image-row {
+.image-row {
     background-color: #eee;
     padding: 1em;
     border-radius: 5px;
