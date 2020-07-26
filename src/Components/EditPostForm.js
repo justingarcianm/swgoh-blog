@@ -83,7 +83,7 @@ const EditPostForm = props => {
         body,
         config
         ).then( () => {
-            if(state.image) {
+            if(!state.image === "") {
                 axios.delete(`https://strapi-blog-swgoh.herokuapp.com/upload/files/${image.id}`, config )
                 .then( () => {
                     props.route.history.push({pathname:`/post/${id}`, state:`${id}`})
@@ -92,6 +92,7 @@ const EditPostForm = props => {
                 .catch( err => console.log(err))  
             }
             props.route.history.push({pathname:`/post/${id}`, state:`${id}`})
+            window.location.reload()
         })
         .catch( err => console.log(err))
     }
