@@ -1,0 +1,16 @@
+.preview  {
+    padding: 2em;
+    background-color: #eee;
+    min-height: 20vh;
+    border-radius: 5px;
+}
+
+.textarea {
+    min-height: 20vh;
+}
+
+#image-row {
+    background-color: #eee;
+    padding: 1em;
+    border-radius: 5px;
+}

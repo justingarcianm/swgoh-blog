@@ -14,7 +14,7 @@ const LoggedInUser = props => {
         )
     }
     if(param.includes("post") || props.blog ){
-        return <Link to={{pathname:`/edit-post/${props.postID}`, state:`${props.postID}`}} className="btn btn-warning">Edit Post</Link>
+        return <Link to={{pathname:`/edit-post/${props.postID}`, state:`${props.postID}`}} className="btn btn-warning m-1">Edit Post</Link>
     }
     if(!param.includes("author") && !param.includes("post")) {
         return <Link to={{pathname:`/create-post/${id}`, state:`${id}`}} className="btn btn-success m-1">New Post</Link>
