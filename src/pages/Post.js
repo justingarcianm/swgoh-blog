@@ -48,9 +48,13 @@ const Post = props => (
   }
 `}>
    {
-       ({ loading, data }) => {
+       ({ loading, error, data }) => {
            if ( loading ){
                return <Loading />
+           }
+           if (error) {
+             window.location.reload()
+             return <h2>Reloading...</h2>
            }
            return(
                <Fragment>

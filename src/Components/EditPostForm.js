@@ -83,13 +83,15 @@ const EditPostForm = props => {
         body,
         config
         ).then( () => {
-            axios.delete(`https://strapi-blog-swgoh.herokuapp.com/upload/files/${image.id}`, config )
-            .then( () => {
-                props.route.history.push({pathname:`/post/${id}`, state:`${id}`})
-                window.location.reload()
-            })
-            .catch( err => console.log(err))
-            
+            if(state.image) {
+                axios.delete(`https://strapi-blog-swgoh.herokuapp.com/upload/files/${image.id}`, config )
+                .then( () => {
+                    props.route.history.push({pathname:`/post/${id}`, state:`${id}`})
+                    window.location.reload()
+                })
+                .catch( err => console.log(err))  
+            }
+            props.route.history.push({pathname:`/post/${id}`, state:`${id}`})
         })
         .catch( err => console.log(err))
     }

@@ -6,9 +6,12 @@ const LoggedInUser = props => {
     const id = sessionStorage.getItem("userID")
     
     if(param.includes("author") && !props.blog) {
+
+        const toggleEdit = () => props.editing();
+
         return (
             <Fragment>
-        <Link to={{pathname:`/edit-author/${id}`, state:`${id}`}} className="btn btn-warning m-1">Edit Profile</Link>
+        <button onClick={toggleEdit} className="btn btn-warning m-1">Edit Profile</button>
         <Link to={{pathname:`/create-post/${id}`, state:`${id}`}} className="btn btn-success m-1">New Post</Link>
         </Fragment>
         )

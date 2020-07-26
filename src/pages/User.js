@@ -21,6 +21,7 @@ const User = props => (
             }
             userImage {
                 formats
+                id
             }
             userMedia {
                 formats
@@ -37,15 +38,19 @@ const User = props => (
     }
     `}>
        { 
-       ({ loading, data }) => {
+       ({ loading, error, data }) => {
             if( loading ) {
                 return <Loading />
+            }
+            if(error) {
+                window.location.reload()
+                return <h2>Reloading...</h2>
             }
             return (
                  <Fragment>
                 <Header props={props}/>
                 <div id="user">
-                        <div className={`${data.user.side.toLowerCase()}`}>
+                        <div className={`${data.user.side.toLowerCase()} py-3`}>
                             <UserInfo user={data.user} param={props.location.pathname} />
                         </div>
                         <div className="neutral">

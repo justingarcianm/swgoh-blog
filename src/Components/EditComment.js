@@ -58,7 +58,7 @@ const handleSubmit = event => {
                         className="form-control" 
                         type="text" 
                         name="update"
-                        placeholder={props.comment}
+                        defaultValue={props.comment}
                         onChange={handleChange}
                         />
                     </div>
